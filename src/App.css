@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+.toast{
+  background-color:rgba(245, 39, 42, 0.74);
+  position: absolute;
+  font-size: 16px;
+  padding: 15px 10px;
+  right: 20px;
+  border-radius: 12px;
+}
+.toast-btn-wrap{
+  display: flex;
+  justify-content: end;
+}
+.toast__close-btn{
+  background-color: rgba(190, 14, 16, 0.81);
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(147, 4, 7, 1);
+}
