@@ -1,0 +1,18 @@
+.button{
+    width: 100px;
+    height: 30px;
+    left: 20px;
+    color: white;
+    border: 1px solid #28abe8;
+    border-radius: 5px;
+    background-color:#28abe8;
+    font-size: 0.5rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.shown{
+    display: block;
+}
+.hide{
+    display: none;
+}

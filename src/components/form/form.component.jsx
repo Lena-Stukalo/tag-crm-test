@@ -7,16 +7,16 @@ import {
   FormWrapper,
   Text,
 } from "./form.styled";
-import {
-  PrimryButton,
-  SecondaryButton,
-} from "../../utils/utils-components.styled";
+import { SecondaryButton } from "../../utils/utils-components.styled";
 import { MultiSelect } from "./multi-select.component";
 import { adresses } from "./adresses";
-export const FormComponent = ({onSubmit}) => {
+import { useMemo } from "react";
+import { CssButton } from "../../utils/css-button.component";
+export const FormComponent = ({ onSubmit, number }) => {
+  const isPrimary = useMemo(() => Math.random() < 0.1 * number, [number]);
   const handeleSubmit = (values) => {
     console.log(values);
-    onSubmit(values)
+    onSubmit(values);
   };
   let formValues = {
     name: "",
@@ -76,9 +76,7 @@ export const FormComponent = ({onSubmit}) => {
       </Label>
 
       <FormWrapper>
-        <PrimryButton type="submit" isPrimary>
-          Send
-        </PrimryButton>
+        <CssButton type="submit" text="Send" isPrimary={isPrimary}></CssButton>
         <SecondaryButton
           type="reset"
           onClick={() => {

@@ -58,7 +58,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <FormComponent onSubmit={onHendlerSubmit} />
+      <FormComponent onSubmit={onHendlerSubmit} number={items.length + 2} />
       <ItemsList items={items} onDelete={onDeleteClick} />
     </div>
   );
